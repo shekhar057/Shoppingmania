@@ -1,17 +1,19 @@
-<%@ include file="header.jsp" %>
-<div class="container-fluid" style=" width:100%;  background-image:url('resources/images/login1.jpg')">
+<%@include file="header.jsp"%>
+<br/>
+<div class="container-fluid" style=" width:100%;">
 <div class="row">
 <div class="col-md-4 col-sm-4 col-xs-12"></div>
 <div class="col-md-4 col-sm-4 col-xs-12"> 
-
-<form action="saveCategory" method="post" class="form-container">
-<h1><span style="color:white;"><b>Add Category</b></span></h1>
+<form class="form-container" action="${e}saveCategory" method="post">
+  <h1><center><b>Add Category</b></center></h1>
   <div class="form-group">
-    <label for="c_Name"><span style="color:#fff">Category</span> </label>
-    <input type="text" class="form-control" id="c_Name" placeholder="Enter category" name="c_Name">
+    <label for="name">Enter Name : </label>
+      <input required="" type="text" class="form-control" name="c_Name" id="name" placeholder="Enter Name">
   </div>
-  <button type="submit" class="btn btn-success btn-block">Submit</button>
+  <div class="form-group"> 
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+  </div>
 </form>
-
-</div></div></div>
-<%@ include file="footer.jsp" %> 
+</div>
+</div></div>
+<%@include file="footer.jsp"%>

@@ -1,63 +1,50 @@
+<%@include file="header.jsp" %>
+<div class="container-fluid" style=" width:100%; height:100vh; repeat:no-repeat; background-image:url('resources/images/background.jpg') ">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12"></div>
+<div class="col-md-4 col-sm-4 col-xs-12"> 
+<form class="form-container" action="${e}adduser" method="post" style="margin-top:0%;margin-bottom:20px%;">
+<h1><center><b>REGISTER</b></center></h1>
+ <div class="form-group">
+    <label  for="pwd" >Username:</label>
+      <input required="" type="text" class="form-control" id="pwd" placeholder="Enter username" name="username">
+  </div>
+  
+  <div class="form-group">
+    <label  for="pwd" >Name:</label>
+      <input required="" type="text" class="form-control" id="pwd" placeholder="Enter username" name="name">
+  </div>
+
+  <div class="form-group">
+    <label  for="email">Email:</label>
+      <input required="" type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div>
+  <div class="form-group">
+    <label  for="pwd">Contact number:</label>
+      <input required="" type="tel" class="form-control" id="pwd" placeholder="contact no." name="tel">
+  </div>
+
+<div class="form-group">
+    <label  for="pwd">Address:</label>
  
-<%@ include file="header.jsp" %>
-
-
- <div class="container-fluid" style="background-image:url('resources/images/background.jpg'); width:100%; height:100vh; margin-top:0px;" > 
-
-<div class="container" ">
-
-
-<center><h1 style="font-family:Cambria "><b><span style="color:rgb(0, 51, 51)">Registration</span></b></h1></center>
-
-<form class="form-horizontal content" action="adduser" id="form" method="post">
-
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="name"><b>Name : </b></label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
-    </div>
+     <textarea required="" max="255" type="text" class="form-control" id="pwd" placeholder="Enter address" name="add"></textarea>
   </div>
   
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="name"><b>Username : </b></label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="username" placeholder="Enter Name" name="username">
-    </div>
+
+<div class="form-group">
+    <label  for="pwd">Password:</label>
+      <input required="" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
   </div>
   
-  <div class="form-group">  
-    <label class="control-label col-sm-2" for="mobile"><b>Mobile : </b></label>
-    <div class="col-sm-10">
-      <input type="long" class="form-control" id="mobile" placeholder="Enter Mobile" name="mobile">
-    </div>
-  </div>
-  
-  
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="email"><b>Email : </b></label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="name"><b>Password : </b></label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password">
-    </div>
-  </div>
-  
-    <div class="form-group">
-    <label class="control-label col-sm-2" for="address"><b>Address : </b></label>
-    <div class="col-sm-10">
-      <textarea class="form-control" id="address" placeholder="Enter Address" name="address"></textarea>
-    </div>
-  </div>
+
   <div class="form-group"> 
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button type="submit" class="btn btn-success btn-block" >
+Register</button>
     </div>
-  </div>
 </form>
 </div>
+
 </div>
-<%@ include file="footer.jsp" %>
+</div>
+<%@include file="footer.jsp" %>
+

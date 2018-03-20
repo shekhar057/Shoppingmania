@@ -1,37 +1,22 @@
-
-
-<%@ include file="header.jsp" %>
-<div style="background-color:#008080;">
-<div class="conatiner-fluid">
-<div class="row">
-	<div class="col-sm-4">
-	<center><a href="addCategory" class="btn btn-lg btn-info">Add Category</a></center>
-	</div>
-	
-	<div class="col-sm-4">
-	<center><a href="addSupplier"  class="btn btn-lg btn-info">Add Supplier</a></center>
-	</div>
-	
-	<div class="col-sm-4">
-	<center><a href="addProduct" class="btn btn-lg btn-info">Add Product</a></center>
-</div>
-</div>
-
-<div class="row">
-	<div class="col-sm-4">
-	<center><a href="viewCategory" class="btn btn-lg btn-success">View Category</a></center>
-	</div>
-	
-	<div class="col-sm-4">
-	<center><a href="viewSupplier" class="btn btn-lg btn-success">View Supplier</a></center>
-	</div>
-	
-	<div class="col-sm-4">
-	<center><a href="viewProduct" class="btn btn-lg btn-success">View Product</a></center>
-	</div>
+<%@include file="header.jsp"%>
+<div class="container" style=" width:100%; repeat:no-repeat; background-image:url('resources/images/background.jpg') "><br/>
+	<table class="table table-bordered text-center">
+		<tr>
+			<td colspan="2"><h2><b>Admin Home</b></h2></td>
+		</tr>
+		<tr>
+			<td><a href="${e}addCategory" class=" btn  btn-info" style="font-size: 20px">AddCategory</a></td>
+			<td><a href="${e}viewCategory" class=" btn  btn-info" style="font-size: 20px">ViewCategory</a></td>
+		</tr>
+		<tr>
+			<td><a href="${e}addSupplier" class=" btn  btn-info" style="font-size: 20px">AddSupplier</a></td>
+			<td><a href="${e}viewSupplier" class=" btn  btn-info" style="font-size: 20px">View Supplier</a></td>
+		</tr>
+		<tr>
+			<td><a href="${e}addProduct" class=" btn  btn-info" style="font-size: 20px">AddProduct</a></td>
+			<td><a href="${e}viewProduct" class=" btn  btn-info" style="font-size: 20px">ViewProduct</a></td>
+		</tr>
+	</table>
 
 </div>
-
-</div>
-</div>
-<%@ include file="footer.jsp" %>
+<%@include file="footer.jsp"%>

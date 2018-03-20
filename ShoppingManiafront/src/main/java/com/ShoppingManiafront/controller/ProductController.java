@@ -1,4 +1,4 @@
-package com.ShoppingManiafront.controller;
+package com.ShoppingManiaFront.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ShoppingMania.dao.CategoryDAO;
-import com.ShoppingMania.dao.ProductDAO;
-import com.ShoppingMania.dao.SupplierDAO;
-import com.ShoppingMania.modal.Category;
-import com.ShoppingMania.modal.Product;
-import com.ShoppingMania.modal.Supplier;
+import com.ShoppingMania2.dao.CategoryDAO;
+import com.ShoppingMania2.dao.ProductDAO;
+import com.ShoppingMania2.dao.SupplierDAO;
+import com.ShoppingMania2.model.Category;
+import com.ShoppingMania2.model.Product;
+import com.ShoppingMania2.model.Supplier;
 
 @Controller
 public class ProductController {
@@ -80,8 +80,19 @@ public ModelAndView updateProduct(@PathVariable int id){
 @RequestMapping("/deleteProduct/{id}")
 public ModelAndView deleteProduct(@PathVariable int id){
 	ModelAndView m=new ModelAndView("redirect:/viewProduct");
-	productDAO.deleteProduct(productDAO.getProduct(id));
+	try {
+		productDAO.deleteProduct(productDAO.getProduct(id));
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	return m;
 }
 
+@RequestMapping("/viewProductDetails/{id}")
+public ModelAndView getProductDetails(@PathVariable int id) {
+	ModelAndView m = new ModelAndView("viewProductDetails");
+	m.addObject("pro", productDAO.getProduct(id));
+	return m;
+}
 }

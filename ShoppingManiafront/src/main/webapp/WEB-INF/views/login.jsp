@@ -1,6 +1,6 @@
 <%@ include file="header.jsp" %>
 
-<div class="container-fluid" style=" width:100%;  background-image:url('resources/images/login1.jpg')">
+<div class="container-fluid" style=" width:100%;  background-image:url('resources/images/background.jpg')">
 <div class="row">
 <div class="col-md-4 col-sm-4 col-xs-12"></div>
 <div class="col-md-4 col-sm-4 col-xs-12"> 

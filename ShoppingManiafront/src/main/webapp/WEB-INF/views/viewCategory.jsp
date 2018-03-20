@@ -1,5 +1,13 @@
-<%@ include file="header.jsp"%>
-<table class="table table-striped">
+<%@include file="header.jsp"%>
+<br/>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-2 col-sm-2 col-xs-12"></div>
+<div class="col-md-8 col-sm-8 col-xs-12"> 
+<table class="table table-striped table-bordered">
+  <tr>
+    <th colspan="3"><h1><center><b>Categories</b></center></h1></th>
+  </tr>
   <tr>
     <th>ID</th>
     <th>Name</th>
@@ -9,9 +17,11 @@
   <tr>
     <td>${cat.c_id}</td>
     <td>${cat.c_Name}</td>
-    <td><a href="${e}updateCategorybyid/${cat.c_id}" class="btn btn-primary">update</a><a href="${e}deleteCategory/${cat.c_id}" class="btn btn-primary">delete</a></td>
+    <td><a href="${e}updateCategoryById/${cat.c_id}" class="btn btn-primary">update</a>
+    <a href="${e}deleteCategory/${cat.c_id}" class="btn btn-primary">delete</a></td>
   </tr>
   </c:forEach>
   
 </table>
+</div></div></div>
 <%@ include file="footer.jsp"%>

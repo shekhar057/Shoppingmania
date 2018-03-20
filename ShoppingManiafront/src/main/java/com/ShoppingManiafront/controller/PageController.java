@@ -1,4 +1,4 @@
- 	package com.ShoppingManiafront.controller;
+package com.ShoppingManiaFront.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ShoppingMania.dao.CategoryDAO;
-import com.ShoppingMania.dao.ProductDAO;
-import com.ShoppingMania.dao.UserDetailsDAO;
-import com.ShoppingMania.modal.Category;
-import com.ShoppingMania.modal.Supplier;
-import com.ShoppingMania.modal.UserDetails;
+import com.ShoppingMania2.dao.CategoryDAO;
+import com.ShoppingMania2.dao.ProductDAO;
+import com.ShoppingMania2.dao.UserDetailsDAO;
+import com.ShoppingMania2.model.UserDetails;
+
+
 
 @Controller
 public class PageController {
@@ -34,8 +34,18 @@ ProductDAO productDAO;
 		return "index";
 	}
 	
+	@RequestMapping("/aboutUs")
+	public String aboutUs(){
+		return "aboutUs";
+	}
+	
+	@RequestMapping("/403Error")
+	public String error(){
+		return "403";
+	}
+	
 	@RequestMapping("/register")
-	public String register(){
+	public String registerd(){
 		return "register";
 	}
 	@RequestMapping("/header")
@@ -63,13 +73,17 @@ ProductDAO productDAO;
 		UserDetails userDetails=new UserDetails();
 		userDetails.setUsername(data.get("username"));
 		userDetails.setEmail(data.get("email"));
-		userDetails.setAddress(data.get("address"));
-		userDetails.setMobile(Long.parseLong(data.get("mobile")));
+		userDetails.setAddress(data.get("add"));
+		userDetails.setMobile(Long.parseLong(data.get("tel")));
 		userDetails.setRole("ROLE_USER");
 		userDetails.setName(data.get("name"));
 		userDetails.setEnabled(true);
-		userDetails.setPassword(data.get("password"));
-		userDetailsDAO.addUserDetailsDAO(userDetails);
+		userDetails.setPassword(data.get("pass"));
+		try {
+			userDetailsDAO.addUserDetailsDAO(userDetails);
+		} catch (Exception e) {
+		
+		}
 		return "redirect:login";
 	}
 	@RequestMapping("/viewProductByCategory/{c_id}")
