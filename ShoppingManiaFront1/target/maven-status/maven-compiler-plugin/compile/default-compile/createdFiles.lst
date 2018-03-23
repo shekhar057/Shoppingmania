@@ -1,0 +1,7 @@
+com\projectfront\controller\OrderController.class
+com\projectfront\controller\ProductController.class
+com\projectfront\controller\CartController.class
+com\projectfront\controller\PageController.class
+com\projectfront\controller\UserController.class
+com\projectfront\controller\CategoryController.class
+com\projectfront\controller\SupplierController.class
